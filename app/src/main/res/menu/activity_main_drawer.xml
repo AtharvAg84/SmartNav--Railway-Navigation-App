@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_bullet"
+            android:title="@string/menu_home" />
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/ic_bullet"
+            android:title="Wheelchair" />
+        <item
+            android:id="@+id/nav_contact"
+            android:icon="@drawable/ic_bullet"
+            android:title="Contact Railway" />
+        <item
+            android:id="@+id/nav_food"
+            android:icon="@drawable/ic_bullet"
+            android:title="Food" />
+        <item
+            android:id="@+id/nav_connectivity"
+            android:icon="@drawable/ic_bullet"
+            android:title="Connectivity" />
+        <item
+            android:id="@+id/nav_ticket"
+            android:icon="@drawable/ic_bullet"
+            android:title="Ticket" />
+        <item
+            android:id="@+id/nav_threedmap"
+            android:icon="@drawable/ic_bullet"
+            android:title="3D-Map" />
+        <item
+            android:id="@+id/nav_setting"
+            android:icon="@drawable/ic_bullet"
+            android:title="Settings" />
+        <item
+            android:id="@+id/nav_signout"
+            android:icon="@drawable/ic_bullet"
+            android:title="Signout" />
+
+
+    </group>
+</menu>

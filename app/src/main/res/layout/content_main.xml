@@ -1,0 +1,566 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/app_bar_main">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Your layout components go here -->
+
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".MainActivity">
+
+            <!-- Main Content Layout -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="0dp"
+                app:layout_anchor="@+id/constraintLayout"
+                app:layout_anchorGravity="center"
+                tools:context=".MainActivity">
+
+                <!-- Card 1 -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="16dp"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="4dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="400dp"
+
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="20dp"
+                        android:padding="1dp">
+
+                        <ImageView
+                            android:id="@+id/image3"
+                            android:layout_width="52dp"
+                            android:layout_height="40dp"
+                            android:layout_marginStart="2dp"
+                            android:layout_marginTop="19dp"
+                            android:src="@drawable/map1"
+                            app:layout_constraintStart_toEndOf="@+id/imageView2"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintWidth_percent="0.33" />
+
+                        <ImageView
+                            android:id="@+id/imageView2"
+                            android:layout_width="110dp"
+                            android:layout_height="116dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="12dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/railway_logo" />
+
+                        <Button
+                            android:id="@+id/map"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="3dp"
+                            android:layout_marginTop="12dp"
+
+                            android:backgroundTint="#1E2B37"
+                            android:text="Station Map"
+                            app:layout_constraintStart_toEndOf="@+id/imageView2"
+                            app:layout_constraintTop_toBottomOf="@+id/image3"
+                            app:rippleColor="#FFFFFF" />
+
+                        <Button
+                            android:id="@+id/schedule_button"
+                            android:layout_width="130dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="11dp"
+                            android:layout_marginEnd="5dp"
+                            android:backgroundTint="#1E2B37"
+                            android:text="Schedule"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/map"
+                            app:layout_constraintTop_toBottomOf="@+id/train_station_name" />
+
+                        <TextView
+                            android:id="@+id/train_station_name"
+                            android:layout_width="170dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="28dp"
+                            android:text="New Delhi-NDLS"
+                            android:textAlignment="center"
+                            android:textColor="@android:color/black"
+                            android:textSize="22dp"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toEndOf="@+id/image3"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <!-- Buttons for Connectivity and Nearby Hotels -->
+
+
+                <!-- Card 2 -->
+
+                <!-- Additional Buttons (Emergency, Wheel Chair, Voice Guided Navigation) -->
+
+                <!-- Footer with 3 Image Icons -->
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/footer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="60dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvTitle">
+
+                    <ScrollView
+                        android:id="@+id/scrollView2"
+                        android:layout_width="412dp"
+                        android:layout_height="300dp"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TableLayout
+                            android:id="@+id/tableUpcomingTrains"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:stretchColumns="1">
+
+                            <!-- Table Header -->
+                            <TableRow
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="#E0E0E0">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:padding="8dp"
+                                    android:text="Train No."
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:padding="8dp"
+                                    android:text="Train Name"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:padding="8dp"
+                                    android:text="Arrival"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:padding="8dp"
+                                    android:text="Platform"
+                                    android:textStyle="bold" />
+                            </TableRow>
+
+                            <!-- Row 1 -->
+                            <TableRow
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:padding="8dp"
+                                    android:text="12420" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:padding="8dp"
+                                    android:text="Gomti Express" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:padding="8dp"
+                                    android:text="06:00 PM" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:padding="8dp"
+                                    android:text="1" />
+                            </TableRow>
+
+                            <!-- Row 2 -->
+                            <TableRow
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:padding="8dp"
+                                    android:text="12230" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:padding="8dp"
+                                    android:text="Lucknow Mail" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:padding="8dp"
+                                    android:text="06:05 PM" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:padding="8dp"
+                                    android:text="2" />
+                            </TableRow>
+
+                            <!-- Row 3 -->
+                            <TableRow
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:padding="8dp"
+                                    android:text="12004" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:padding="8dp"
+                                    android:text="Shatabdi Express" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:padding="8dp"
+                                    android:text="06:10 PM" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:padding="8dp"
+                                    android:text="3" />
+                            </TableRow>
+
+                            <!-- Row 4 -->
+                            <TableRow
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:padding="8dp"
+                                    android:text="12910" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:padding="8dp"
+                                    android:text="Garib Rath" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:padding="8dp"
+                                    android:text="06:15 PM" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:padding="8dp"
+                                    android:text="4" />
+                            </TableRow>
+
+                            <!-- Row 5 -->
+                            <TableRow
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:padding="8dp"
+                                    android:text="13005" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:padding="8dp"
+                                    android:text="Amritsar Express" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:padding="8dp"
+                                    android:text="06:20 PM" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:padding="8dp"
+                                    android:text="5" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:padding="8dp"
+                                    android:text="12056" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:padding="8dp"
+                                    android:text="Jan Shatabdi" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:padding="8dp"
+                                    android:text="06:25 PM" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:padding="8dp"
+                                    android:text="6" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:padding="8dp"
+                                    android:text="12904" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:padding="8dp"
+                                    android:text="Superfast Express" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:padding="8dp"
+                                    android:text="06:30 PM" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:padding="8dp"
+                                    android:text="7" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:padding="8dp"
+                                    android:text="12951" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:padding="8dp"
+                                    android:text="Rajdhani Express" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:padding="8dp"
+                                    android:text="06:35 PM" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:padding="8dp"
+                                    android:text="8" />
+                            </TableRow>
+
+                        </TableLayout>
+                    </ScrollView>
+
+                    <ImageView
+                        android:id="@+id/home_icon"
+                        android:layout_width="69dp"
+                        android:layout_height="69dp"
+                        android:layout_marginStart="84dp"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/homeimage"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/emergency"
+                        app:layout_constraintWidth_percent="0.33" />
+
+                    <ImageView
+                        android:id="@+id/image2"
+                        android:layout_width="69dp"
+                        android:layout_height="69dp"
+                        android:layout_marginStart="100dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="90dp"
+                        android:layout_marginBottom="4dp"
+                        android:src="@drawable/mapimage"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/home_icon"
+                        app:layout_constraintTop_toBottomOf="@+id/wheel_chair"
+                        app:layout_constraintWidth_percent="0.33" />
+
+                    <Button
+                        android:id="@+id/wheel_chair"
+                        android:layout_width="170dp"
+                        android:layout_height="80dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Voice Guided Navigation"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.709"
+                        app:layout_constraintStart_toEndOf="@+id/emergency"
+                        app:layout_constraintTop_toBottomOf="@+id/scrollView2"
+                        app:layout_constraintWidth_percent="0.33" />
+
+                    <Button
+                        android:id="@+id/emergency"
+                        android:layout_width="170dp"
+                        android:layout_height="80dp"
+                        android:layout_marginTop="10dp"
+                        android:backgroundTint="#6100EC"
+                        android:text="Emergency"
+                        android:textSize="16dp"
+                        app:layout_constraintTop_toBottomOf="@+id/scrollView2"
+                        app:layout_constraintWidth_percent="0.33"
+                        tools:layout_editor_absoluteX="16dp" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <EditText
+                    android:id="@+id/train_enter"
+                    android:layout_width="00dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginBottom="19dp"
+                    android:ems="10"
+                    android:hint="Enter Train Number"
+                    android:inputType="number"
+                    app:layout_constraintBottom_toTopOf="@+id/tvTitle"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/card_1" />
+
+                <Button
+                    android:id="@+id/searchButton"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:text="Search"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/card_1" />
+
+                <TextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+
+                    android:layout_marginTop="16dp"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="20dp"
+                    android:paddingBottom="3dp"
+                    android:text="Upcoming Trains - NDLS"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toBottomOf="@+id/searchButton" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+        <fragment
+            android:id="@+id/nav_host_fragment_content_main"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:defaultNavHost="true"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:navGraph="@navigation/mobile_navigation" />
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

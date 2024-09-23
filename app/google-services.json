@@ -1,0 +1,98 @@
+{
+  "project_info": {
+    "project_number": "386034420932",
+    "firebase_url": "https://sih-healthcare-dab74-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "sih-healthcare-dab74",
+    "storage_bucket": "sih-healthcare-dab74.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:386034420932:android:a115054d3b6f0172a7cd91",
+        "android_client_info": {
+          "package_name": "com.example.login"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "386034420932-hf10tvcf5h6fv95033pukiagkm6oqg9u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAZs4h6meXWyqpEsIWTzhqDW16xP1-2M_M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "386034420932-hf10tvcf5h6fv95033pukiagkm6oqg9u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:386034420932:android:b22cf8304c7eec56a7cd91",
+        "android_client_info": {
+          "package_name": "com.example.sih_healthcare"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "386034420932-hf10tvcf5h6fv95033pukiagkm6oqg9u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAZs4h6meXWyqpEsIWTzhqDW16xP1-2M_M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "386034420932-hf10tvcf5h6fv95033pukiagkm6oqg9u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:386034420932:android:6504925876813e88a7cd91",
+        "android_client_info": {
+          "package_name": "com.example.smartnav"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "386034420932-hf10tvcf5h6fv95033pukiagkm6oqg9u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAZs4h6meXWyqpEsIWTzhqDW16xP1-2M_M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "386034420932-hf10tvcf5h6fv95033pukiagkm6oqg9u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

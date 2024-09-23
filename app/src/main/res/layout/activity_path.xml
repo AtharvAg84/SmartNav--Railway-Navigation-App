@@ -1,0 +1,53 @@
+<!-- res/layout/activity_path.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/imageViewOriginal"
+        android:layout_width="wrap_content"
+        android:layout_height="432dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/maze" />
+
+    <ImageView
+        android:id="@+id/imageViewBinary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitCenter"
+        android:visibility="gone" /> <!-- Initially hidden -->
+
+
+    <EditText
+        android:id="@+id/startX"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Start X" />
+
+    <EditText
+        android:id="@+id/startY"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Start Y" />
+
+    <EditText
+        android:id="@+id/endX"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="End X" />
+
+    <EditText
+        android:id="@+id/endY"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="End Y" />
+
+    <Button
+        android:id="@+id/btnFindPath"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Find Path" />
+
+</LinearLayout>
