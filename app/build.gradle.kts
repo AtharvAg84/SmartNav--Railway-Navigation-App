@@ -43,8 +43,12 @@ dependencies {
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
-    implementation ("com.squareup.retrofit2:retrofit:2.9.0")
-    implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
+
+    //Adding the dependencies for JSON.
+    implementation ("com.squareup.retrofit2:retrofit:2.11.0")
+    implementation ("com.squareup.retrofit2:converter-gson:2.11.0")
+    //Retrofit for network calls and Gson for JSON parsing.
+
     implementation (libs.firebase.auth.vlatestversion)
 
     implementation(libs.material)
